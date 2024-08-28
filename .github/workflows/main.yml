@@ -35,6 +35,6 @@ jobs:
       with:
         name: swiftshader-build
         path: |
-          build/*.dll
-          build/*.lib
-          build/*.exe
+          D:\a\swiftshader\swiftshader\build\*.dll
+          D:\a\swiftshader\swiftshader\build\*.exe
+          D:\a\swiftshader\swiftshader\build\*.lib
