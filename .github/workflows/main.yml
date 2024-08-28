@@ -34,4 +34,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: swiftshader-build
-        path: build
+        path: |
+          build/Release/*.dll
+          build/Release/*.lib
+          build/Release/*.exe
