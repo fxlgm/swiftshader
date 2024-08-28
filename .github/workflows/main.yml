@@ -3,10 +3,10 @@ name: Build SwiftShader
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -30,11 +30,15 @@ jobs:
     - name: Build SwiftShader
       run: cmake --build build --parallel
 
+    - name: List files in build/Release
+      run: dir build/Release
+
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
         name: swiftshader-build
         path: |
-          D:\a\swiftshader\swiftshader\build\*.dll
-          D:\a\swiftshader\swiftshader\build\*.exe
-          D:\a\swiftshader\swiftshader\build\*.lib
+          build/Release/*.dll
+          build/Release/*.lib
+          build/Release/*.exe
+        if-no-files-found: warn
