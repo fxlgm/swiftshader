@@ -35,6 +35,6 @@ jobs:
       with:
         name: swiftshader-build
         path: |
-          build/Release/*.dll
-          build/Release/*.lib
-          build/Release/*.exe
+          build/*.dll
+          build/*.lib
+          build/*.exe
